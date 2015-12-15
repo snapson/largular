@@ -1,5 +1,4 @@
 require.config({
-
 	packages: [
     	{
     		name: 'app',
