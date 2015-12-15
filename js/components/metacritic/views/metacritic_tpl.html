@@ -1,1 +1,13 @@
-<h1>Work with Metacritic API will be here!</h1>
+<div ng-controller="MetacriticCtrl">
+	<img src="http://www.cuisson.co.uk/templates/cuisson/supersize/slideshow/img/progress.BAK-FOURTH.gif" ng-show="loading" />
+	<div id="results" ng-hide="loading">
+		<h1>Metacritic API list of coming soon movies({{data.results.length}})</h1>
+		<hr>
+		<ul>
+			<li ng-repeat="item in data.results">
+				<h4>{{item.name}}</h4>
+				<p>Description: {{item.summary}}</p>
+			</li>
+		</ul>
+	</div>
+</div>

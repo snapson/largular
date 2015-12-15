@@ -1,6 +1,7 @@
 define([
-	"./module",
-    "./directives/metacritic_dir"
+	'./module',
+	'./controllers/metacritic_ctrl',
+    './directives/metacritic_dir'
 ], function() {
 			
 });
