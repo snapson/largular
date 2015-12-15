@@ -37,3 +37,4 @@ Icon
 .Trashes
 public/*
 public/.gitignore
+node_modules/*

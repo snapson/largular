@@ -12,7 +12,11 @@ require.config({
     	{
     		name: 'mymodule',
     		location: 'components/mymodule'
-    	}
+    	},
+        {
+            name: 'metacritic',
+            location: 'components/metacritic'
+        }
     ],
     paths: {
         angular: './lib/angular',
@@ -48,6 +52,13 @@ require(['bundles/anglib'],
 
 				//loading when bootstrap called
 				require(['bundles/lib']);
+
+                // Metacritic bundle init
+                require(['bundles/metacritic'],
+                    function () {
+                        console.log('Metacritic bundle was loaded!');
+                    }
+                );
 
 				angular.element().ready(function() {
 					angular.bootstrap(document, ['app']);

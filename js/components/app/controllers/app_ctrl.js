@@ -7,7 +7,7 @@ define( [ 'angular', 'app' ], function( angular ) {
   .controller( 'AppCtrl', ['$scope', function AppCtrl($scope) {
      
 
-      $scope.currentUser  = 'HelloUser!';
+      $scope.currentUser  = 'nick';
 
 
     }]

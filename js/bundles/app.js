@@ -1,5 +1,6 @@
 define([
-    "app",
-    "common",
-    "mymodule"
+    'app',
+    'common',
+    'mymodule',
+    'metacritic'
 ], function() { });

@@ -27,6 +27,7 @@
         {
             name: "main",
             exclude: [
+                "bundles/metacritic"
                 "bundles/lib",
                 "bundles/app",
                 "bundles/anglib"
@@ -38,6 +39,12 @@
             //  excludeShallow : [
             //     "views/InputView"
             // ]
+        },
+        {
+            name: 'bundles/metacritic',
+            exclude: [
+                'bundles/anglib'
+            ]
         },
         {
             name: 'bundles/lib',

@@ -9,7 +9,8 @@ define( [ 'angular' ], function( angular ) {
 		'app.controllers',
 		'app.directives',
 		'common',
-		'mymodule'
+		'mymodule',
+		'metacritic'
 	])
 	.config(['$routeProvider', '$locationProvider', function AppModuleConfig($routeProvider, $locationProvider) {
  			$locationProvider.html5Mode( true );	
