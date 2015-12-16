@@ -4,13 +4,10 @@ define( [ 'angular', '../module' ], function( angular ) {
   angular
     .module( 'app.directives' )
     .directive( 'user', ['Template', function UserDir(Template) {
-      console.log(Template.view('app', 'user' ));
+        console.log(Template.view('app', 'user' ));
         return {
             restrict: 'E',
-            link: function ($scope, element, attrs) {
-
-            },
-            // templateUrl: Template.view( 'app', 'user' )
+            link: function ($scope, element, attrs) {},
             templateUrl: Template.view('user' )
         };
     }]);

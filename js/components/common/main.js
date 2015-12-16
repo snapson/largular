@@ -1,6 +1,7 @@
 define([
 	"./module",
-    "./providers/template_provider"
+    "./providers/template_provider",
+    "./directives/pagination_dir"
 ], function() {
 			
 });

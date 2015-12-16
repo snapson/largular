@@ -3,9 +3,10 @@ define( [ 'angular', 'metacritic' ], function( angular ) {
 
   angular
   .module('metacritic.controllers')
-  .controller( 'MetacriticCtrl', ['$scope', '$http', '$templateCache',
-  	function MetacriticCtrl($scope, $http, $templateCache) {
+  .controller( 'MetacriticCtrl', ['$scope', '$http', '$location', '$templateCache',
+  	function MetacriticCtrl($scope, $http, $location, $templateCache) {
   		$scope.loading = true;
+		$scope.totalCount = 25;
   		$scope.header = {
 	  		'X-Mashape-Key': '6SwGetuZ84msh5edfNEcBHbqNBbpp1Wq0QyjsnlRiyE2Ug77R1',
 	  		'Accept': 'application/json'
@@ -25,6 +26,7 @@ define( [ 'angular', 'metacritic' ], function( angular ) {
 			.catch(function(err) {
 				$scope.status = 'Request failed';
 				$scope.data = err;
+				$location.url('/404');
 			})
 			.finally(function() {
 				$scope.loading = false;
