@@ -2,11 +2,9 @@ define( [ 'angular' ], function( angular ) {
 
 	'use strict';
 	angular.module( 'common.providers', [] );
-	angular.module( 'common.directives', [] );
 
 	return angular.module('common', [
-		'common.providers',
-		'common.directives'
+		'common.providers'
 	])
 	.config(['$routeProvider', '$locationProvider', 'TemplateProvider', function CommonModuleConfig($routeProvider, $locationProvider, TemplateProvider) {
 		$routeProvider

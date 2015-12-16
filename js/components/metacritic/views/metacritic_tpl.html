@@ -1,15 +1,13 @@
 <div ng-controller="MetacriticCtrl">
 	<img src="http://www.cuisson.co.uk/templates/cuisson/supersize/slideshow/img/progress.BAK-FOURTH.gif" ng-show="loading" />
 	<div ng-hide="loading">
-		<h1>Metacritic API list of coming soon movies({{data.results.length}})</h1>
+		<h1>Metacritic API list of coming soon movies({{data.length}})</h1>
 		<hr>
 		<label>Search: <input ng-model="query"></label>
 		<!-- <pagination ng-hide="loading"></pagination> -->
+		<pagination></pagination>
 		<ul>
-			<li ng-repeat="
-				item in data.results |
-				limitTo:totalCount |
-				filter:query">
+			<li ng-repeat="item in data | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 				<h4>{{item.name}}</h4>
 				<img ng-src="{{item.thumbnail || 'http://fakeimg.pl/53x79/'}}" />
 				<p>Description: {{item.summary}}</p>
