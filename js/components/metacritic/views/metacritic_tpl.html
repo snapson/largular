@@ -3,11 +3,10 @@
 	<div ng-hide="loading">
 		<h1>Metacritic API list of coming soon movies({{data.length}})</h1>
 		<hr>
-		<label>Search: <input ng-model="query"></label>
-		<!-- <pagination ng-hide="loading"></pagination> -->
+		<label>Search: <input ng-model="search.name" placeholder="Enter a search query..."> <span ng-click="resetFilters()">Show all</span></label>
 		<pagination></pagination>
 		<ul>
-			<li ng-repeat="item in data | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+			<li ng-repeat="item in filtered | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 				<h4>{{item.name}}</h4>
 				<img ng-src="{{item.thumbnail || 'http://fakeimg.pl/53x79/'}}" />
 				<p>Description: {{item.summary}}</p>

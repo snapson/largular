@@ -45,8 +45,9 @@ define( [ 'angular', 'metacritic' ], function( angular ) {
 		$scope.initPagination = function() {
 			// create empty search model (object) to trigger $watch on update
 			$scope.search = {};
+			$scope.filtered = $scope.data;
 			// pagination controls
-			$scope.currentPage = 0;
+			$scope.currentPage = 1;
 			$scope.totalItems = $scope.data && $scope.data.length;
 			$scope.entryLimit = 25; // items per page
 			$scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
