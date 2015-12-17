@@ -6,12 +6,10 @@ define( [ 'angular' ], function( angular ) {
 	return angular.module('common', [
 		'common.providers'
 	])
-	.config(['$routeProvider', '$locationProvider', 'TemplateProvider', function CommonModuleConfig($routeProvider, $locationProvider, TemplateProvider) {
-		$routeProvider
-			.when( '/404', {
-				templateUrl: TemplateProvider.view( 'common', '404' ),
-				public: true
-		});
-	}]);
+	.config(['$routeProvider', '$locationProvider', 'TemplateProvider',
+		function CommonModuleConfig($routeProvider, $locationProvider, TemplateProvider) {
+
+		}
+	]);
 
 });

@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<title>Sample project</title>
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 	    <base href="/">
 	</head>
@@ -10,7 +11,7 @@
 			<user></user>
 			<div ng-view></div>
 			<!-- <just></just> -->
-			<metacritic></metacritic>
+			<metacritic ng-if="!isError"></metacritic>
 		</div>
 
 		<script data-main="js/main.js" src="js/lib/require.js"></script>
