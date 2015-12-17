@@ -1,0 +1,7 @@
+<button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+	Previous
+</button>
+{{currentPage}}/{{noOfPages}}
+<button ng-disabled="currentPage >= noOfPages" ng-click="currentPage=currentPage+1">
+	Next
+</button>

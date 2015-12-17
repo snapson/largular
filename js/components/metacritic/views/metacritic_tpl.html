@@ -1,1 +1,16 @@
-<h1>Work with Metacritic API will be here!</h1>
+<div ng-controller="MetacriticCtrl">
+	<img src="http://www.cuisson.co.uk/templates/cuisson/supersize/slideshow/img/progress.BAK-FOURTH.gif" ng-show="loading" />
+	<div ng-hide="loading">
+		<h1>Metacritic API list of coming soon movies({{data.length}})</h1>
+		<hr>
+		<label>Search: <input ng-model="search.name" placeholder="Enter a search query..."> <span ng-click="resetFilters()">Show all</span></label>
+		<pagination></pagination>
+		<ul>
+			<li ng-repeat="item in filtered | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+				<h4>{{item.name}}</h4>
+				<img ng-src="{{item.thumbnail || 'http://fakeimg.pl/53x79/'}}" />
+				<p>Description: {{item.summary}}</p>
+			</li>
+		</ul>
+	</div>
+</div>

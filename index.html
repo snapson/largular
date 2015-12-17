@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<title>Sample project</title>
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 	    <base href="/">
 	</head>
@@ -8,10 +9,9 @@
 		<a href="/404">404 page test</a>
 		<div ng-controller="AppCtrl">
 			<user></user>
-			<div ng-cloak>{{currentUser}}</div>
 			<div ng-view></div>
-			<just></just>
-			<metacritic></metacritic>
+			<!-- <just></just> -->
+			<metacritic ng-if="!isError"></metacritic>
 		</div>
 
 		<script data-main="js/main.js" src="js/lib/require.js"></script>

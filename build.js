@@ -13,21 +13,17 @@
     fileExclusionRegExp: "/" + [
         "^\\.",             //files that start with .
         "node_modules",     //nodejs stuff
-        "\\.css$",            //CSS files
-        "\\.scss$",           //SCSS files (sass)
         "build\\.js",       //r.js config
         "package\\.json",   //nodejs stuff
         "gulpfile\\.js",    //gulp config
         "^r.js$",           //r.js module
-        "JSLintNet.*",      //JSLint settings
-        "mm"
+        "JSLintNet.*"      //JSLint settings
     ].join('|') + "/",
-    // packages: ['app'],
     modules: [
         {
             name: "main",
             exclude: [
-                "bundles/metacritic"
+                "bundles/metacritic",
                 "bundles/lib",
                 "bundles/app",
                 "bundles/anglib"
