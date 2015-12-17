@@ -1,28 +1,77 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		watch: {
-			options: {
-				livereload: true,
-				spawn: false,
-				dateFormat: function(time) {
-			      grunt.log.writeln('The watch finished in ' + time + 'ms at' + (new Date()).toString());
-			      grunt.log.writeln('Waiting for more changes...');
-			    },
-			},
-			scripts: {
-				files: [
-					'js/components/app/controllers/*.js'
-				]
+		requirejs: {
+			compile: {
+				options: {
+					appDir: "./",
+					optimizeCss: "standard.keeplines",
+					optimize: "none",
+					mainConfigFile : "./js/main.js",
+					baseUrl: "./js",
+					removeCombined: true,
+					findNestedDependencies: true,
+					dir: "./public",
+					skipDirOptimize: true,
+					fileExclusionRegExp: "/" + [
+						"^\\.",
+						"node_modules",
+						"build\\.js",
+						"package\\.json",
+						"gulpfile\\.js",
+						"^r.js$",
+						"JSLintNet.*"
+					].join('|') + "/",
+					modules: [
+						{
+							name: "main",
+							exclude: [
+								"bundles/metacritic",
+								"bundles/lib",
+								"bundles/app",
+								"bundles/anglib"
+							]
+						},
+						{
+							name: 'bundles/metacritic',
+							exclude: [
+								'bundles/anglib'
+							]
+						},
+						{
+							name: 'bundles/lib',
+							exclude: [
+								'bundles/anglib'
+							]
+						},
+						{
+							name: 'bundles/app',
+							exclude: [
+								'bundles/anglib'
+							]
+						},
+						{
+							name: 'bundles/anglib'
+						}
+					],
+					paths: {
+						kendo: "empty:",
+						jquery: "empty:"
+					}
+				}
 			}
 		}
 	});
 
-	grunt.event.on('watch', function(action, filepath, target) {
-		grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
+	grunt.loadNpmTasks('grunt-contrib-requirejs');
+
+	grunt.registerTask('build', 'requirejs');
+	grunt.registerTask('server', 'Start the node server', function() {
+		var done = this.async();
+		grunt.log.writeln('Starting web server on port 8080');
+		require('./public/server.js').on('close', done);
 	});
-
-	grunt.loadNpmTasks('grunt-contrib-watch');
-
-	grunt.registerTask('watch', ['watch']);
+	grunt.registerTask('start', 'Build & start the app', function() {
+		grunt.task.run('build', 'server');
+	});
 }
