@@ -5,15 +5,15 @@
 	    <base href="/">
 	</head>
 
-	<body>
-		<a href="/404">404 page test</a>
-		<div ng-controller="AppCtrl">
-			<user></user>
+	<body ng-controller="AppCtrl">
+		<div id="content">
+			<header>
+				<a href="/404">404 page test</a>
+				<user></user>
+			</header>
 			<div ng-view></div>
 			<!-- <just></just> -->
-			<metacritic ng-if="!isError"></metacritic>
 		</div>
-
 		<script data-main="js/main.js" src="js/lib/require.js"></script>
 	</body>
 </html>

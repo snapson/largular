@@ -9,7 +9,7 @@ define( [ 'angular' ], function( angular ) {
 		'metacritic.directives'
 	])
 	.config(['$routeProvider', '$locationProvider', 'TemplateProvider', function MetacriticConfig($routeProvider, $locationProvider, TemplateProvider) {
-		//some module config actions here
+
 	}]);
 
 });

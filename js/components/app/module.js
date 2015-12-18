@@ -16,7 +16,10 @@ define( [ 'angular' ], function( angular ) {
 		$locationProvider.html5Mode( true );
 		$routeProvider
 			.when( '/', {
-				controller: 'AppCtrl'
+				controller: 'AppCtrl',
+				template: '<metacritic></metacritic>'
+			}, {
+				controller: 'MetacriticCtrl'
 			})
 			.when( '/404', {
 				templateUrl: $templateProvider.view( 'app', '404' ),

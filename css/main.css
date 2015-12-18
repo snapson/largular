@@ -13,9 +13,18 @@ font-family: Trade Gothic LT Standard;
 src: url("fonts/TradeGothicLTStd.otf") format("opentype");
 }
 body {
-    background: #E7E6E3;
-     font-family: 'Trade Gothic LT Standard';
-     min-width: 1280px;
+    margin: 0;
+    background: #607D8B;
+    color: #fff;
+    font-family: 'Trade Gothic LT Standard';
+}
+a,
+a:visited {
+    color: #CFD8DC;
+}
+a:hover{
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 p {
@@ -359,11 +368,11 @@ h2 {
 h1 {
     margin: 0 5px;
     padding: 0 ;
-    color: #f69c44;
+    color: #FFC400;
     font-size: 18px;
     text-transform: uppercase;
     position: relative;
-     width: auto;
+    width: auto;
     display: block;
     float: left;
 }
@@ -687,3 +696,110 @@ span.clear-filter {
         width: 75% !important;
     }
 }
+#content header {
+    padding: 10px;
+    text-align: center;
+}
+.preloader {
+    position: absolute;
+    width: 127px;
+    height: 127px;
+    left: 50%;
+    top: 50%;
+    margin: -63px 0 0 -63px;
+    border-radius: 150px;
+    box-shadow: 0 0 20px #fff;
+    background: url(./images/preloader.gif) no-repeat;
+}
+.metacritic {
+    padding: 0 20px 20px;
+    border-top: 1px solid #fff;
+    text-align: left;
+}
+.metacritic h1 {
+    margin: 0;
+    padding: 10px 0 10px 0;
+    float: none;
+    font-size: 1.5em;
+}
+.metacritic h1 small {
+    font-size: .7em;
+    color: #CFD8DC;
+}
+.metacritic input {
+    padding: 5px;
+    color: #607D8B;
+    border: 1px solid #CFD8DC;
+    line-height: 18px;
+}
+.metacritic label { text-transform: uppercase; }
+.metacritic span {
+    cursor: pointer;
+    font-size: .5em;
+}
+.metacritic ul.items {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.metacritic ul.items li {
+    width: 29.333%;
+    margin: 10px 1.5% 10px 0;
+    padding: 10px 1.5% 20px;
+    float: left;
+    list-style-type: none;
+    font-size: .9em;
+    background: rgba(0,0,0,.2);
+}
+.metacritic ul.items li:nth-child(3n) { margin-right: 0; }
+.metacritic ul.items li h4 {
+    margin: 5px 0;
+    line-height: 20px;
+}
+.metacritic ul.items li img {
+    width: auto;
+    height: 79px;
+    margin: 0 0 20px 0;
+}
+.metacritic ul.items li p {
+    height: 34px;
+    overflow: hidden;
+    text-align: left;
+}
+.metacritic ul.items li a {
+    position: relative;
+    bottom: -10px;
+}
+.pagination {
+    font-size: .8em;
+    text-align: center;
+}
+.btn {
+  color: #fff;
+  background: #CFD8DC;
+  padding: 5px 10px 5px 10px;
+  margin: 0 5px;
+  border: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #fff;
+  color: #607D8B;
+  text-decoration: none;
+}
+.foutry04 {
+    padding: 25px 0;
+    text-align: center;
+}
+.foutry04 h1 {
+    float: none;
+    text-transform: none;
+    font-size: 6em;
+}
+.foutry04 p {
+    padding: 0 0 10px 0;
+    color: #CFD8DC;
+    font-size: .8em;
+}
+.foutry04 a {}

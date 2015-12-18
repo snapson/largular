@@ -21,13 +21,7 @@ require.config({
         angular: './lib/angular',
         ngRoute: './lib/angular-route',
         kendo : [ 'http://cdn.kendostatic.com/2014.1.416/js/kendo.all.min', './lib/kendo.all.min' ],
-        jquery: ['http://code.jquery.com/jquery-1.9.1.min', './lib/jquery-1.9.1.min'],
-        // text: './lib/text'
-        // kendoAngular: ['http://kendo-labs.github.io/angular-kendo/angular-kendo', './lib/angular-kendo']
-
-        // kendo: './lib/kendo.all.min',
-        // jquery: './lib/jquery-2.1.1.min'
-        // kendoAngular: './lib/angular-kendo'
+        jquery: ['http://code.jquery.com/jquery-1.9.1.min', './lib/jquery-1.9.1.min']
     },
 	shim: {
 			angular : {
