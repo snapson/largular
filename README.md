@@ -50,20 +50,3 @@ Your build is located in `public` folder.
 ## Application workflow
 
 ![Structure of app](http://funkyimg.com/i/KskZ.png)
-
-## So, what's the goal?
-
-1. Run it. This includes compiling and starting server.
-2. Implement list of coming soon movies on main page using [Metacritic API](https://market.mashape.com/byroredux/metacritic-v2#get-coming-soon-movie-list)
-3. Implement movie search using [same Metacritic API](https://market.mashape.com/byroredux/metacritic-v2#search-movies)
-
-You can fork this repo and commit your code, so updates are easily tracked.
-Feel free to modify an app as you want and ask any questions to skype **truthatenvy**
-
-##Rules
-1. No third-party services.
-
-Optional:
-
-1. Remove blinking effect on page load
-2. Add gulp/grunt task, that will automatically rebuild application and start a node server 
